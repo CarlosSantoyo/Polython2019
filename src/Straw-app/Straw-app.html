@@ -1,0 +1,32 @@
+<link rel="import" href="../../bower_components/polymer/polymer-element.html">
+
+<dom-module id="Straw-app">
+  <template>
+    <style>
+      :host {
+        display: block;
+      }
+    </style>
+    <h2>Hello [[prop1]]!</h2>
+  </template>
+
+  <script>
+    /**
+     * @customElement
+     * @polymer
+     */
+    class StrawApp extends Polymer.Element {
+      static get is() { return 'Straw-app'; }
+      static get properties() {
+        return {
+          prop1: {
+            type: String,
+            value: 'Straw-app'
+          }
+        };
+      }
+    }
+
+    window.customElements.define(StrawApp.is, StrawApp);
+  </script>
+</dom-module>

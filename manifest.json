@@ -1,0 +1,7 @@
+{
+  "name": "Straw",
+  "short_name": "Straw",
+  "description": "AN online service for gamers",
+  "start_url": "/",
+  "display": "standalone"
+}
