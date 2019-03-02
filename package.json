@@ -1,0 +1,11 @@
+{
+  "name": "straw",
+  "dependencies": {
+    "@polymer/polymer": "^3.0.0",
+    "lit-element": "^2.0.1"
+  },
+  "devDependencies": {
+    "@webcomponents/webcomponentsjs": "^2.0.0",
+    "wct-browser-legacy": "^1.0.0"
+  }
+}
