@@ -1,6 +1,6 @@
-# \<Straw\>
+# \<straw\>
 
-AN online service for gamers
+
 
 ## Install the Polymer-CLI
 
