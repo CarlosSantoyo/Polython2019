@@ -5,25 +5,25 @@ import { html, PolymerElement } from "../../node_modules/@polymer/polymer/polyme
  */
 
 class StrawApp extends PolymerElement {
-  static get template() {
-    return html`
+    static get template() {
+        return html `
       <style>
         :host {
-          display: block;
+          display: inline-block;
         }
       </style>
-      <h2>Hello [[prop1]]!</h2>
+      <h2 >STRAW-app [[prop1]]!</h2>
     `;
-  }
+    }
 
-  static get properties() {
-    return {
-      prop1: {
-        type: String,
-        value: 'straw-app'
-      }
-    };
-  }
+    static get properties() {
+        return {
+            prop1: {
+                type: String,
+                value: 'Gamer Streaming'
+            }
+        };
+    }
 
 }
 

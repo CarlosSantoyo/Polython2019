@@ -1,6 +1,7 @@
 {
   "name": "straw",
   "dependencies": {
+    "@polymer/iron-image": "^3.0.1",
     "@polymer/polymer": "^3.0.0",
     "@webcomponents/webcomponentsjs": "^2.0.0",
     "lit-element": "^2.0.1"
