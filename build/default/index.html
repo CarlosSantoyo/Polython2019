@@ -14,13 +14,17 @@
     <script type="module" src="/src/straw-app/straw-app.js"></script>
     
     <script src="https://apis.google.com/js/platform.js" async="" defer=""></script>
-    <meta name="google-signin-client_id" content="636852128323-gm4mqmo8ibq6g9icuou9mghfmv3ei705.apps.googleusercontent.com">
+    <meta name="google-signin-client_id" content="775499333807-g95gp1t5o8l4e95ejm4ibf3vbb5oad9g.apps.googleusercontent.com">
   </head>
   <body>
+
+    <img src="./assets/logo.png" style="height: 40px; width:40px;display:flex;position:center;">
     <straw-app></straw-app>
     <button-element></button-element>
     <div class="g-signin2" data-onsuccess="onSignIn" data-theme="dark"></div>
-    <script>function onSignIn(googleUser) {
+
+  
+  <script>function onSignIn(googleUser) {
   // Useful data for your client-side scripts:
   var profile = googleUser.getBasicProfile();
   console.log("ID: " + profile.getId()); // Don't send this directly to your server!
