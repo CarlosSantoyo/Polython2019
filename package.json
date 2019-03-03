@@ -1,8 +1,12 @@
 {
   "name": "straw",
   "dependencies": {
+<<<<<<< HEAD
     "@polymer/iron-ajax": "^3.0.1",
     "@polymer/paper-button": "^3.0.1",
+=======
+    "@polymer/iron-image": "^3.0.1",
+>>>>>>> 840ea4be3d202dad4c3ebca37ce35a6dc4c26040
     "@polymer/polymer": "^3.0.0",
     "@webcomponents/webcomponentsjs": "^2.0.0",
     "lit-element": "^2.0.1"

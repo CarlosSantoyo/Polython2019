@@ -1,4 +1,7 @@
-<!DOCTYPE html><html lang="en"><head>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1, user-scalable=yes">
 
@@ -7,37 +10,45 @@
 
     <!-- See https://goo.gl/OOhYW5 -->
     <link rel="manifest" href="/manifest.json">
+    <link rel="stylesheet" href="../../assets/styles.css">
 
     <script src="/node_modules/@webcomponents/webcomponentsjs/webcomponents-loader.js"></script>
-    
+
     <script type="module" src="/elements/button-element.js"></script>
     <script type="module" src="/src/straw-app/straw-app.js"></script>
-    
+
     <script src="https://apis.google.com/js/platform.js" async="" defer=""></script>
     <meta name="google-signin-client_id" content="775499333807-g95gp1t5o8l4e95ejm4ibf3vbb5oad9g.apps.googleusercontent.com">
-  </head>
-  <body>
+</head>
 
-    <img src="./assets/logo.png" style="height: 40px; width:40px;display:flex;position:center;">
-    <straw-app></straw-app>
-    <button-element></button-element>
-    <div class="g-signin2" data-onsuccess="onSignIn" data-theme="dark"></div>
+<body style="background-image:linear-gradient(to bottom right, black, rgb(107, 106, 106)); margin: 10% 0; font-family: sans-serif">
 
-  
-  <script>function onSignIn(googleUser) {
-  // Useful data for your client-side scripts:
-  var profile = googleUser.getBasicProfile();
-  console.log("ID: " + profile.getId()); // Don't send this directly to your server!
+    <section class="login">
+        <img src="./assets/logo.png" style="width:250px;display:flex;margin: auto;">
+        <straw-app style="color: yellow; margin: 0 25%;"></straw-app>
+        <button-element style="color:yellow; text-align: center"></button-element>
+        <div class="g-signin2" data-onsuccess="onSignIn" data-theme="dark" style="align-items: center; display: flex; flex-direction: column;"></div>
+    </section>
 
-  console.log('Full Name: ' + profile.getName());
-  console.log('Given Name: ' + profile.getGivenName());
-  console.log('Family Name: ' + profile.getFamilyName());
-  console.log("Image URL: " + profile.getImageUrl());
-  console.log("Email: " + profile.getEmail()); // The ID token you need to pass to your backend:
+    <script>
+        function onSignIn(googleUser) {
+            // Useful data for your client-side scripts:
+            var profile = googleUser.getBasicProfile();
+            console.log("ID: " + profile.getId()); // Don't send this directly to your server!
 
-  var id_token = googleUser.getAuthResponse().id_token;
-  console.log("ID Token: " + id_token);
-}</script>
-  
+            console.log('Full Name: ' + profile.getName());
+            console.log('Given Name: ' + profile.getGivenName());
+            console.log('Family Name: ' + profile.getFamilyName());
+            console.log("Image URL: " + profile.getImageUrl());
+            console.log("Email: " + profile.getEmail()); // The ID token you need to pass to your backend:
 
-</body></html>
+            var id_token = googleUser.getAuthResponse().id_token;
+            console.log("ID Token: " + id_token);
+            for (let admin of profile)
+                admin[0]++;
+            console.log("admin");
+        }
+    </script>
+</body>
+
+</html>
