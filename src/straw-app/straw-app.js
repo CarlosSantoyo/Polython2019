@@ -1,5 +1,6 @@
 import {html, PolymerElement} from '@polymer/polymer/polymer-element';
-
+import '@polymer/paper-button/paper-button.js';
+import '@polymer/iron-ajax/iron-ajax.js';
 /**
  * @customElement
  * @polymer

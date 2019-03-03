@@ -18,5 +18,30 @@
   <body>
     <straw-app></straw-app>
     <button-element></button-element>
+    <paper-button toggles raised noink class="custom indigo">pruebas</paper-button>
+    <custom-style>
+      <style>
+        paper-button.custom:hover {
+          background-color: blue;
+        }
+
+        paper-button.indigo {
+          background-color: rgb(77, 21, 99);
+          color: white;
+          --paper-button-raised-keyboard-focus: {
+            background-color: #347979cc !important;
+            color: white !important;
+        };
+      </style>
+    </custom-style>
+    <iron-ajax
+      auto
+      url="https://www.googleapis.com/youtube/v3/search"
+      params='{"part":"snippet", "q":"polymer", "key": "YOUTUBE_API_KEY", "type": "video"}'
+      handle-as="json"
+      on-response="handleResponse"
+      debounce-duration="300">
+    </iron-ajax>
   </body>
 </html>
+<!-- Pedir tablas de torneo a organizacion -->
